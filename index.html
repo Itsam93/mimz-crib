@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta
+    name="description"
+    content="Book a professional private chauffeur by the hour with Mimz Ride. Enjoy reliable, comfortable transport for business travel, airport transfers, weddings and special events in Kaduna and beyond."
+  >
+  <meta name="theme-color" content="#07152F">
+
+  <title>Mimz Ride | Private Chauffeur Service by the Hour</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Figtree:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Mimz Ride home">
+        Mimz Ride
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#rates">Rates</a>
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#book">Book now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-content">
+          <p class="hello">Welcome, and thank you for stopping by</p>
+
+          <h1 id="hero-title">Let’s get you there in comfort.</h1>
+
+          <p class="lead">
+            Whether it’s an early airport run, an important meeting or a long
+            day of events, you’re in good hands. Tell me where you need to be
+            and I’ll take care of the rest. Booking takes just a few minutes.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#book">Book your chauffeur</a>
+            <a class="btn btn-ghost" href="#about">Meet your chauffeur</a>
+          </div>
+
+          <div class="trust" aria-label="Service commitments">
+            <span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+              Licensed and insured
+            </span>
+
+            <span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+              Always on time
+            </span>
+          </div>
+        </div>
+
+        <aside class="quote-card" aria-labelledby="quote-title">
+          <div class="greet">
+            <div class="avatar" aria-hidden="true">S</div>
+
+            <div>
+              <b>Hello, I’m Success.</b>
+              <span>
+                I’ll be your chauffeur. It would be my pleasure to drive you.
+              </span>
+            </div>
+          </div>
+
+          <h2 id="quote-title">Instant quote</h2>
+
+          <p class="sub">
+            Compare your options and see the hourly rates.
+          </p>
+
+          <div class="qrow">
+            <span>Chauffeur only</span>
+            <b id="q1"></b>
+          </div>
+
+          <div class="qrow">
+            <span>Chauffeur and vehicle</span>
+            <b id="q2"></b>
+          </div>
+
+          <div class="qtotal">
+            <span>Minimum booking</span>
+            <strong id="q3"></strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section id="rates" aria-labelledby="rates-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="rates-title">Two ways to ride, one simple hourly rate</h2>
+          <p>
+            Bring your own car or travel in ours. You only pay for the hours
+            you book.
+          </p>
+        </div>
+
+        <div class="rates">
+          <article class="rate">
+            <h3>Chauffeur only</h3>
+
+            <p>
+              You have a vehicle and want a skilled, trusted driver behind
+              the wheel.
+            </p>
+
+            <div class="price" id="r1"></div>
+            <small>per hour</small>
+
+            <ul>
+              <li>Your vehicle, our driver</li>
+              <li>Ideal for events and long days</li>
+              <li>Minimum 2 hours</li>
+            </ul>
+          </article>
+
+          <article class="rate featured">
+            <h3>Chauffeur and vehicle</h3>
+
+            <p>
+              Travel in a clean, comfortable executive vehicle driven by
+              your chauffeur.
+            </p>
+
+            <div class="price" id="r2"></div>
+            <small>per hour</small>
+
+            <ul>
+              <li>Executive vehicle included</li>
+              <li>Water and phone charging on board</li>
+              <li>Minimum 2 hours</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="alt" aria-labelledby="about-title">
+      <div class="wrap about">
+        <div class="portrait">
+          <img
+            src="assets/mimz.webp"
+            alt="Success Igba, professional chauffeur"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <div class="portrait-caption">
+            <b>Success Igba</b>
+            <span>Professional chauffeur</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2 id="about-title">Meet your chauffeur</h2>
+
+          <p>
+            Hello, I’m Success. I’ve spent my career getting busy people
+            where they need to be, safely, calmly and on time. I know the
+            city well, I keep my driving smooth and discreet, and I treat
+            every trip as if it were my own family on board.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>10+</strong>
+              <span>Years driving professionally</span>
+            </div>
+
+            <div class="stat">
+              <strong>5,000+</strong>
+              <span>Trips completed</span>
+            </div>
+
+            <div class="stat">
+              <strong>0</strong>
+              <span>Accidents on record</span>
+            </div>
+          </div>
+
+          <div class="cols">
+            <div>
+              <h3>Experience</h3>
+
+              <ul>
+                <li>
+                  <b>Private executive chauffeur</b>
+                  Corporate clients and business travellers, 2018 to present
+                </li>
+
+                <li>
+                  <b>Event and wedding transport</b>
+                  Guest and VIP movement across the city
+                </li>
+
+                <li>
+                  <b>Airport transfers</b>
+                  Meet and greet, flight tracking and luggage assistance
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Qualifications</h3>
+
+              <ul>
+                <li>
+                  <b>Valid professional driver’s licence</b>
+                  Fully licensed and road-compliant
+                </li>
+
+                <li>
+                  <b>Defensive driving certificate</b>
+                  Advanced safety and road-awareness training
+                </li>
+
+                <li>
+                  <b>First aid trained</b>
+                  Background-checked and fully insured
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="how-title">Booked in three steps</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3>Choose your service</h3>
+            <p>
+              Pick chauffeur only or chauffeur with vehicle, then set your
+              date, time and booking duration.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Pay securely</h3>
+            <p>
+              Confirm your booking through the available payment process
+              and receive a booking reference.
+            </p>
+          </article>
+
+          <article class="step">
+            <h3>Be picked up</h3>
+            <p>
+              Your chauffeur arrives at your pickup point, on time and ready
+              for your journey.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="book" class="alt" aria-labelledby="book-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="book-title">Book your chauffeur</h2>
+          <p>
+            Fill in your trip details. Your total updates as you change them.
+          </p>
+        </div>
+
+        <div class="book">
+          <form id="form" novalidate>
+            <fieldset>
+              <legend>Service type</legend>
+
+              <div class="choice">
+                <label>
+                  <input type="radio" name="svc" value="own" checked>
+                  <b>Chauffeur only</b>
+                  <span>I have my own vehicle</span>
+                </label>
+
+                <label>
+                  <input type="radio" name="svc" value="veh">
+                  <b>Chauffeur and vehicle</b>
+                  <span>Use the chauffeur’s car</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="grid2">
+              <div class="field">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+                <div class="err" id="e-date" aria-live="polite"></div>
+              </div>
+
+              <div class="field">
+                <label for="time">Pickup time</label>
+                <input type="time" id="time" name="time" required>
+                <div class="err" id="e-time" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="hrs">Duration</label>
+
+              <div class="stepper">
+                <button
+                  type="button"
+                  id="minus"
+                  aria-label="Reduce booking duration by one hour"
+                >−</button>
+
+                <output id="hrs" aria-live="polite">2 hours</output>
+
+                <button
+                  type="button"
+                  id="plus"
+                  aria-label="Increase booking duration by one hour"
+                >+</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="pickup">Pickup address</label>
+              <input
+                type="text"
+                id="pickup"
+                name="pickup"
+                placeholder="Street, area, city"
+                autocomplete="street-address"
+                required
+              >
+              <div class="err" id="e-pickup" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label for="drop">
+                Drop-off or destination
+                <span class="muted">(optional)</span>
+              </label>
+
+              <input
+                type="text"
+                id="drop"
+                name="drop"
+                placeholder="Where are you headed?"
+              >
+            </div>
+
+            <div class="grid2">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+                <div class="err" id="e-name" aria-live="polite"></div>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="0801 234 5678"
+                  required
+                >
+                <div class="err" id="e-phone" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+              <div class="err" id="e-email" aria-live="polite"></div>
+            </div>
+
+            <div class="field">
+              <label for="notes">
+                Notes for your chauffeur
+                <span class="muted">(optional)</span>
+              </label>
+
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Flight number, stops, special requests"
+              ></textarea>
+            </div>
+          </form>
+
+          <aside class="summary" aria-labelledby="summary-title">
+            <h3 id="summary-title">Your booking</h3>
+
+            <div class="srow">
+              <span>Service</span>
+              <b id="s-svc"></b>
+            </div>
+
+            <div class="srow">
+              <span>Rate</span>
+              <b id="s-rate"></b>
+            </div>
+
+            <div class="srow">
+              <span>Duration</span>
+              <b id="s-hrs"></b>
+            </div>
+
+            <div class="srow">
+              <span>When</span>
+              <b id="s-when">Not set</b>
+            </div>
+
+            <div class="stotal">
+              <span>Total</span>
+              <strong id="s-total"></strong>
+            </div>
+
+            <button class="btn btn-primary" id="continue" type="button">
+              Continue to payment
+            </button>
+
+            <p class="note">
+              Secure online payment. Free changes up to 24 hours before pickup.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap">
+        <div class="head">
+          <h2 id="faq-title">Questions, answered</h2>
+        </div>
+
+        <details>
+          <summary>How is the price calculated?</summary>
+          <p>
+            Your total is calculated by multiplying the hourly rate by the
+            number of hours booked, subject to a two-hour minimum. The rate
+            depends on whether you use your own vehicle or the chauffeur’s.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I extend my booking on the day?</summary>
+          <p>
+            Extensions are subject to availability. Contact us on WhatsApp
+            to check whether additional hours can be arranged.
+          </p>
+        </details>
+
+        <details>
+          <summary>Which payment methods are accepted?</summary>
+          <p>
+            Available payment methods are displayed during checkout and are
+            processed through the configured payment provider.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="fgrid">
+        <div class="fbrand">
+          <a class="brand" href="#top">
+            <span class="mark" aria-hidden="true">R</span>
+            Mimz Ride
+          </a>
+
+          <p>
+            Professional, courteous chauffeur service by the hour. Book
+            online in minutes or say hello on WhatsApp.
+          </p>
+
+          <div class="social" aria-label="Social media">
+            <a href="#" rel="noopener noreferrer">Instagram</a>
+            <a href="#" rel="noopener noreferrer">Facebook</a>
+            <a href="#" rel="noopener noreferrer">X</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Services</h2>
+          <ul>
+            <li>Airport transfers</li>
+            <li>Corporate travel</li>
+            <li>Weddings and events</li>
+            <li>Full-day hire</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <ul>
+            <li><a href="#rates">Rates</a></li>
+            <li><a href="#about">About your chauffeur</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#book">Book now</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Contact</h2>
+          <ul>
+            <li>
+              <a id="fwa" href="#" target="_blank" rel="noopener noreferrer">
+                Chat on WhatsApp
+              </a>
+            </li>
+            <li><a href="tel:+2348028717843">+234 802 871 7843</a></li>
+            <li>
+              <a href="mailto:hello@mimzride.com">hello@mimzride.com</a>
+            </li>
+            <li>Daily, 6am to 10pm</li>
+            <li>Serving Kaduna and beyond</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fbar">
+        <span>
+          © <span id="yr"></span> Mimz Ride. All rights reserved.
+        </span>
+
+        <nav aria-label="Legal navigation">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+          <a href="#top">Back to top</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp shortcut -->
+  <a
+    class="wa"
+    id="wa"
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Mimz Ride on WhatsApp"
+  >
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.7A13 13 0 1016 3zm0 23.7c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1 1.1-3.9-.3-.4A10.6 10.6 0 1116 26.7zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"
+      />
+    </svg>
+
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Payment / booking modal -->
+  <div
+    class="modal"
+    id="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="m-title"
+    aria-hidden="true"
+  >
+    <div class="sheet" id="sheet"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
