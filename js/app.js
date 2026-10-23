@@ -17,7 +17,7 @@ const total = () => rate() * hours;
 const svcName = () =>
   svc() === "own" ? "Chauffeur only" : "Chauffeur and vehicle";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://mimz-crib.onrender.com";
 
 ["q1", "r1"].forEach(id => {
   if ($(id)) $(id).textContent = naira(CONFIG.rateOwn);
