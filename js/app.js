@@ -1,5 +1,18 @@
 const $ = id => document.getElementById(id);
 
+
+const navbar = document.querySelector("header");
+
+function updateNavbar() {
+  if (!navbar) return;
+
+  navbar.classList.toggle("is-scrolled", window.scrollY > 20);
+}
+
+window.addEventListener("scroll", updateNavbar, { passive: true });
+updateNavbar();
+
+
 const naira = n =>
   "₦" + Number(n).toLocaleString("en-NG");
 
@@ -522,3 +535,6 @@ render();
 
 // Process Paystack's return URL after the page has loaded.
 handlePaymentReturn();
+
+
+
