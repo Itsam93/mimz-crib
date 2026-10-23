@@ -1,6 +1,6 @@
 "use strict";
 
-const API_BASE = window.MIMZ_API_BASE || "";
+const API_BASE = "https://mimz-crib.onrender.com";
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
