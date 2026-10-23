@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Dashboard | Mimz Ride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <a class="brand brand-login" href="index.html">
+        <span>MIMZ <b>RIDE</b><small>PRIVATE CHAUFFEUR SERVICE</small></span>
+      </a>
+      <div class="login-intro">
+        <span class="eyebrow">SECURE ADMINISTRATION</span>
+        <h1>Welcome back.</h1>
+        <p>Sign in to manage bookings, payments and availability.</p>
+      </div>
+      <form id="login-form">
+        <label for="admin-password">Administrator password</label>
+        <div class="password-field">
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required maxlength="1024" placeholder="Enter your password">
+          <button type="button" class="password-toggle" id="toggle-password" aria-label="Show password">Show</button>
+        </div>
+        <p class="form-error" id="login-error" role="alert"></p>
+        <button class="btn btn-primary btn-full" type="submit" id="login-submit">Sign in securely</button>
+      </form>
+      <a class="back-link" href="index.html">← Back to public website</a>
+    </div>
+  </div>
+
+  <div class="app-shell" id="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand sidebar-brand" href="admin.html">
+        <span>MIMZ <b>RIDE</b><small>ADMINISTRATION</small></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Dashboard navigation">
+        <button class="nav-link active" data-view="overview"><span class="nav-icon">▦</span>Overview</button>
+        <button class="nav-link" data-view="bookings"><span class="nav-icon">▤</span>Bookings</button>
+        <button class="nav-link" data-view="payments"><span class="nav-icon">₦</span>Payments</button>
+        <button class="nav-link" data-view="availability"><span class="nav-icon">▦</span>Availability</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="admin-profile">
+          <div class="avatar">MR</div>
+          <div><strong>Mimz Ride</strong><small>Administrator</small></div>
+        </div>
+        <button class="nav-link logout-link" id="logout-button"><span class="nav-icon">↪</span>Sign out</button>
+        <a class="public-link" href="index.html" target="_blank" rel="noopener">View public website ↗</a>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+          <div>
+            <div class="topbar-kicker">MIMZ RIDE / ADMIN</div>
+            <div class="topbar-title" id="topbar-title">Overview</div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span class="live-indicator"><span class="status-dot"></span> System online</span>
+          <button class="btn btn-light btn-small" id="refresh-button">↻ Refresh</button>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <div class="toast-region" id="toast-region" aria-live="polite"></div>
+
+        <section class="view active" id="view-overview">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">YOUR BUSINESS AT A GLANCE</span>
+              <h1>Overview</h1>
+              <p>Monitor your bookings, payments and upcoming commitments.</p>
+            </div>
+            <button class="btn btn-primary" data-goto="bookings">View bookings <span>→</span></button>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-top"><span>Today's bookings</span><span class="metric-icon blue">▤</span></div>
+              <div class="metric-value" id="metric-today">—</div>
+              <div class="metric-note">Bookings scheduled today</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>Upcoming trips</span><span class="metric-icon violet">↗</span></div>
+              <div class="metric-value" id="metric-upcoming">—</div>
+              <div class="metric-note">Scheduled and not cancelled</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>Successful payments</span><span class="metric-icon green">₦</span></div>
+              <div class="metric-value" id="metric-paid">—</div>
+              <div class="metric-note" id="metric-paid-count">Verified payments</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>Pending payments</span><span class="metric-icon amber">◷</span></div>
+              <div class="metric-value" id="metric-pending">—</div>
+              <div class="metric-note" id="metric-pending-count">Awaiting payment</div>
+            </article>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel recent-panel">
+              <div class="panel-heading">
+                <div><h2>Recent bookings</h2><p>Your latest customer reservations</p></div>
+                <button class="text-button" data-goto="bookings">All bookings →</button>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Customer</th><th>Service</th><th>Date</th><th>Payment</th><th></th></tr></thead>
+                  <tbody id="recent-bookings-body"><tr><td colspan="5" class="empty-cell">Loading bookings…</td></tr></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel quick-panel">
+              <div class="panel-heading"><div><h2>Quick actions</h2><p>Manage today's operations</p></div></div>
+              <button class="quick-action" data-goto="bookings"><span class="quick-icon">▤</span><span><strong>Manage bookings</strong><small>Review customer reservations</small></span><span class="quick-arrow">→</span></button>
+              <button class="quick-action" data-goto="payments"><span class="quick-icon">₦</span><span><strong>Track payments</strong><small>Check verified transactions</small></span><span class="quick-arrow">→</span></button>
+              <button class="quick-action" data-goto="availability"><span class="quick-icon">▦</span><span><strong>Block unavailable time</strong><small>Protect your schedule</small></span><span class="quick-arrow">→</span></button>
+              <div class="notice-box"><span>i</span><p>Payment status is updated only after verification with Paystack.</p></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-bookings">
+          <div class="page-heading">
+            <div><span class="eyebrow">RESERVATION MANAGEMENT</span><h1>Bookings</h1><p>Review customer details and manage trip status.</p></div>
+            <button class="btn btn-light" id="bookings-refresh">↻ Refresh list</button>
+          </div>
+          <div class="panel filter-panel">
+            <div class="filter-row">
+              <div class="search-field"><span>⌕</span><input id="booking-search" type="search" placeholder="Search name, phone or reference…"></div>
+              <select id="booking-status-filter" aria-label="Filter by booking status">
+                <option value="">All booking statuses</option>
+                <option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option>
+              </select>
+              <select id="booking-payment-filter" aria-label="Filter by payment status">
+                <option value="">All payment statuses</option>
+                <option value="pending">Pending</option><option value="success">Successful</option><option value="failed">Failed</option>
+              </select>
+            </div>
+          </div>
+          <section class="panel table-panel">
+            <div class="panel-heading"><div><h2>All reservations</h2><p id="bookings-count">Loading records…</p></div></div>
+            <div class="table-wrap">
+              <table class="wide-table">
+                <thead><tr><th>Booking reference</th><th>Customer</th><th>Trip</th><th>Amount</th><th>Payment</th><th>Booking status</th><th>Action</th></tr></thead>
+                <tbody id="bookings-body"><tr><td colspan="7" class="empty-cell">Loading bookings…</td></tr></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-payments">
+          <div class="page-heading">
+            <div><span class="eyebrow">TRANSACTION MONITORING</span><h1>Payments</h1><p>Track booking payments verified through Paystack.</p></div>
+            <button class="btn btn-light" id="payments-refresh">↻ Refresh payments</button>
+          </div>
+          <div class="metric-grid metric-grid-three">
+            <article class="metric-card"><div class="metric-top"><span>Total received</span><span class="metric-icon green">₦</span></div><div class="metric-value" id="payments-total">—</div><div class="metric-note">Successful verified payments</div></article>
+            <article class="metric-card"><div class="metric-top"><span>Successful transactions</span><span class="metric-icon blue">✓</span></div><div class="metric-value" id="payments-success-count">—</div><div class="metric-note">Confirmed by Paystack</div></article>
+            <article class="metric-card"><div class="metric-top"><span>Awaiting payment</span><span class="metric-icon amber">◷</span></div><div class="metric-value" id="payments-pending-count">—</div><div class="metric-note">Bookings with pending payments</div></article>
+          </div>
+          <section class="panel table-panel">
+            <div class="panel-heading"><div><h2>Payment ledger</h2><p>Amounts shown in Nigerian naira</p></div><div class="search-field compact-search"><span>⌕</span><input id="payment-search" type="search" placeholder="Search transactions…"></div></div>
+            <div class="table-wrap">
+              <table class="wide-table">
+                <thead><tr><th>Reference</th><th>Customer</th><th>Amount</th><th>Transaction ID</th><th>Payment status</th><th>Paid at</th><th>Action</th></tr></thead>
+                <tbody id="payments-body"><tr><td colspan="7" class="empty-cell">Loading payments…</td></tr></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-availability">
+          <div class="page-heading">
+            <div><span class="eyebrow">SCHEDULE MANAGEMENT</span><h1>Availability</h1><p>Review scheduled trips and protect time you cannot accept bookings.</p></div>
+            <button class="btn btn-light" id="availability-refresh">↻ Refresh schedule</button>
+          </div>
+          <section class="panel availability-filter">
+            <div class="date-range">
+              <label>From<input id="availability-from" type="date"></label>
+              <label>To<input id="availability-to" type="date"></label>
+              <button class="btn btn-primary" id="load-availability">Load schedule</button>
+            </div>
+            <p class="helper-text">Times are interpreted in the configured booking time zone. Active pending-payment holds and paid bookings are included.</p>
+          </section>
+          <div class="content-grid availability-grid">
+            <section class="panel">
+              <div class="panel-heading"><div><h2>Scheduled trips</h2><p>Bookings currently occupying time slots</p></div></div>
+              <div id="schedule-bookings" class="schedule-list"><div class="empty-state">Load a date range to view scheduled trips.</div></div>
+            </section>
+            <section class="panel">
+              <div class="panel-heading"><div><h2>Unavailable periods</h2><p>Manually blocked dates and times</p></div></div>
+              <form id="block-form" class="block-form">
+                <label>Reason or label<input name="label" required maxlength="120" placeholder="e.g. Personal commitment"></label>
+                <div class="form-two">
+                  <label>Start date<input name="startDate" type="date" required></label>
+                  <label>Start time<input name="startTime" type="time" required></label>
+                </div>
+                <div class="form-two">
+                  <label>End date<input name="endDate" type="date" required></label>
+                  <label>End time<input name="endTime" type="time" required></label>
+                </div>
+                <button class="btn btn-primary btn-full" type="submit" id="block-submit">+ Block this period</button>
+              </form>
+              <div class="subsection-title">Existing blocks</div>
+              <div id="schedule-blocks" class="schedule-list"><div class="empty-state">No blocks loaded.</div></div>
+            </section>
+          </div>
+          <div class="notice-box availability-notice"><span>!</span><p>Creating a block that overlaps a paid booking or active payment hold will be rejected. Always verify the schedule before accepting an off-platform booking.</p></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="detail-overlay" id="detail-overlay" hidden>
+    <button class="detail-backdrop" id="detail-backdrop" aria-label="Close booking details"></button>
+    <section class="detail-drawer" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <div class="drawer-heading"><div><span class="eyebrow">RESERVATION DETAILS</span><h2 id="detail-title">Booking</h2></div><button class="icon-button" id="close-details" aria-label="Close details">×</button></div>
+      <div id="detail-content" class="drawer-content"></div>
+    </section>
+  </div>
+
+  <div class="confirm-overlay" id="confirm-overlay" hidden>
+    <div class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Confirm action</h2><p id="confirm-message"></p>
+      <div class="confirm-actions"><button class="btn btn-light" id="confirm-cancel">Go back</button><button class="btn btn-primary" id="confirm-accept">Continue</button></div>
+    </div>
+  </div>
+</body>
+</html>

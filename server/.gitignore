@@ -1,0 +1,5 @@
+.env
+node_modules/
+mimz-ride.sqlite
+mimz-ride.sqlite-shm
+mimz-ride.sqlite-wal

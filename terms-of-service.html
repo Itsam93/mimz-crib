@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Read the Mimz Ride Terms of Service governing chauffeur bookings, pricing, payments, cancellations, refunds and customer responsibilities under applicable Nigerian law."
+  >
+
+  <meta name="theme-color" content="#07152f">
+
+  <title>Terms of Service | Mimz Ride</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .legal-page {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .legal-topbar {
+      min-height: var(--header-height, 76px);
+      padding: 0 var(--gutter, 24px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .legal-topbar-inner {
+      width: min(100%, var(--content-width, 1160px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .legal-brand {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .legal-brand span {
+      color: #a9c7f5;
+    }
+
+    .legal-home {
+      color: #d5deed;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .legal-home:hover {
+      color: var(--white);
+    }
+
+    .legal-hero {
+      padding: clamp(54px, 7vw, 88px) var(--gutter, 24px);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .legal-hero-inner {
+      width: min(100%, 980px);
+      margin: 0 auto;
+    }
+
+    .legal-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 22px;
+      color: #b8d1f8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .legal-kicker::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: #8fb7f1;
+    }
+
+    .legal-hero h1 {
+      max-width: 780px;
+      margin: 0;
+      color: var(--white);
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(42px, 7vw, 74px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+
+    .legal-hero-copy {
+      max-width: 610px;
+      margin: 24px 0 0;
+      color: #d3ddec;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+      color: #d3ddec;
+      font-size: 12px;
+    }
+
+    .legal-meta span + span::before {
+      content: "/";
+      margin-right: 12px;
+      color: #8fb7f1;
+    }
+
+    .legal-layout {
+      width: min(calc(100% - 48px), 1120px);
+      margin: 0 auto;
+      padding: clamp(42px, 6vw, 66px) 0 88px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 245px;
+      align-items: start;
+      gap: clamp(36px, 6vw, 68px);
+    }
+
+    .legal-content {
+      min-width: 0;
+      max-width: 760px;
+    }
+
+    .legal-intro {
+      margin: 0 0 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--serif, Georgia, serif);
+      font-size: 20px;
+      line-height: 1.75;
+    }
+
+    .legal-section {
+      margin: 0;
+      padding: 30px 0 32px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: calc(var(--header-height, 76px) + 24px);
+    }
+
+    .legal-section:first-of-type {
+      padding-top: 0;
+    }
+
+    .legal-section h2 {
+      margin: 0 0 15px;
+      color: var(--navy);
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(22px, 2.5vw, 27px);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .legal-section p {
+      margin: 0 0 14px;
+    }
+
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section ul {
+      margin: 12px 0 18px;
+      padding-left: 22px;
+    }
+
+    .legal-section li {
+      padding-left: 4px;
+      margin-bottom: 8px;
+    }
+
+    .legal-section li::marker {
+      color: var(--blue);
+    }
+
+    .legal-section strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .legal-section a {
+      color: var(--blue);
+      text-underline-offset: 4px;
+    }
+
+    .legal-section a:hover {
+      color: var(--blue-hover);
+    }
+
+    .legal-sidebar {
+      position: sticky;
+      top: calc(var(--header-height, 76px) + 24px);
+      padding-top: 4px;
+    }
+
+    .legal-sidebar-label {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .legal-index {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .legal-index li {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-index a {
+      display: block;
+      padding: 11px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: color .2s ease, padding-left .2s ease;
+    }
+
+    .legal-index a:hover,
+    .legal-index a:focus-visible {
+      padding-left: 5px;
+      color: var(--blue);
+    }
+
+    .legal-sidebar-note {
+      margin-top: 28px;
+      padding: 20px;
+      background: var(--surface);
+      border-top: 2px solid var(--blue);
+    }
+
+    .legal-sidebar-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .legal-sidebar-note a {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .legal-notice {
+      margin-top: 32px;
+      padding: 22px 24px;
+      background: var(--surface);
+      border-left: 3px solid var(--blue);
+    }
+
+    .legal-notice strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .legal-notice p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .legal-notice p + p {
+      margin-top: 12px;
+    }
+
+    .legal-footer {
+      padding: 30px var(--gutter, 24px);
+      background: var(--navy);
+      color: #d3ddec;
+    }
+
+    .legal-footer-inner {
+      width: min(100%, var(--content-width, 1160px));
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .legal-footer-brand {
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .legal-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .legal-footer-links a {
+      color: #d3ddec;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .legal-footer-links a:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 800px) {
+      .legal-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+      }
+
+      .legal-sidebar {
+        display: none;
+      }
+
+      .legal-content {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .legal-topbar {
+        min-height: 66px;
+        padding: 0 20px;
+      }
+
+      .legal-brand {
+        font-size: 14px;
+      }
+
+      .legal-home {
+        font-size: 11px;
+      }
+
+      .legal-hero {
+        padding: 52px 22px 46px;
+      }
+
+      .legal-hero h1 {
+        font-size: clamp(42px, 12vw, 52px);
+      }
+
+      .legal-hero-copy {
+        font-size: 13px;
+      }
+
+      .legal-layout {
+        width: calc(100% - 44px);
+        padding: 36px 0 62px;
+      }
+
+      .legal-intro {
+        font-size: 18px;
+      }
+
+      .legal-section {
+        padding: 26px 0;
+      }
+
+      .legal-section p,
+      .legal-section li {
+        font-size: 13px;
+      }
+
+      .legal-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .legal-footer-links {
+        gap: 14px 20px;
+      }
+    }
+
+    @media print {
+      .legal-topbar,
+      .legal-sidebar,
+      .legal-footer {
+        display: none;
+      }
+
+      .legal-hero {
+        padding: 30px 0;
+        background: white;
+        color: black;
+      }
+
+      .legal-hero h1,
+      .legal-hero-copy,
+      .legal-meta,
+      .legal-kicker {
+        color: black;
+      }
+
+      .legal-layout {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+      }
+
+      .legal-section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body class="legal-page">
+  <header class="legal-topbar">
+    <div class="legal-topbar-inner">
+      <a class="legal-brand" href="index.html" aria-label="Mimz Ride home">
+        Mimz <span>Ride</span>
+      </a>
+
+      <a class="legal-home" href="index.html">
+        &larr; Return to website
+      </a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <div class="legal-hero-inner">
+      <p class="legal-kicker">Clear terms. Considered service.</p>
+
+      <h1>Terms of<br>Service.</h1>
+
+      <p class="legal-hero-copy">
+        These terms explain the conditions that apply when you use the
+        Mimz Ride website, request a chauffeur service, make a booking
+        or pay for a reservation.
+      </p>
+
+      <div class="legal-meta">
+        <span>Nigerian law</span>
+        <span>Effective 22 October 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="legal-layout">
+    <article class="legal-content">
+      <p class="legal-intro">
+        Clear arrangements help every journey start well. Please read these
+        terms before making a booking. They should be read alongside the
+        prices, booking details and applicable cancellation information
+        presented before payment.
+      </p>
+
+      <section class="legal-section" id="operator">
+        <h2>01. The Service Provider</h2>
+
+        <p>
+          Mimz Ride is operated by
+          <strong>[insert the full legal name of the individual or registered
+          business operating Mimz Ride]</strong>, referred to in these terms
+          as "Mimz Ride", "we", "us" or "our".
+        </p>
+
+        <p>
+          Our business contact details are:
+        </p>
+
+        <ul>
+          <li><strong>Business address:</strong> No. 4B Town Hall Mall, Barnawa, Kaduna</li>
+          <li><strong>Email:</strong> mimzride@gmail.com</li>
+          <li><strong>Telephone or WhatsApp:</strong> +234 802 871 7843</li>
+        </ul>
+
+        <p>
+          Complete the legal identity and contact details before publishing
+          these terms. Where a particular service is supplied by another
+          operator, we will identify the relevant arrangement before the
+          booking is concluded, where required by law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="acceptance">
+        <h2>02. Acceptance and Scope of These Terms</h2>
+
+        <p>
+          These terms govern your use of the Mimz Ride website and your
+          requests for chauffeur services through it. Before submitting
+          a booking or proceeding to payment, you should have an opportunity
+          to review the applicable terms and material booking information.
+        </p>
+
+        <p>
+          A booking request is not necessarily an accepted reservation.
+          The booking process, any confirmation communicated to you and
+          the payment status determine the next steps, as explained below.
+        </p>
+
+        <p>
+          If we update these terms, the revised version and its effective
+          date will be displayed on this page. A material change will not
+          retrospectively remove rights or alter an existing booking
+          contrary to applicable law. Where required, we will notify you
+          or obtain your agreement before applying a change.
+        </p>
+      </section>
+
+      <section class="legal-section" id="services">
+        <h2>03. Our Chauffeur Services</h2>
+
+        <p>Mimz Ride offers the following service options, subject to availability:</p>
+
+        <ul>
+          <li>
+            <strong>Chauffeur only:</strong>
+            A chauffeur service for a customer using their own vehicle.
+          </li>
+          <li>
+            <strong>Chauffeur and vehicle:</strong>
+            A chauffeur service that includes a vehicle, subject to
+            availability and confirmation.
+          </li>
+        </ul>
+
+        <p>
+          Availability may depend on the requested date and time, pickup
+          location, service duration, vehicle availability, operational
+          conditions and applicable legal requirements.
+        </p>
+
+        <p>
+          We will provide the service description, applicable rate and
+          material conditions before payment. We will not knowingly
+          misrepresent the service, its availability or the charges.
+        </p>
+      </section>
+
+      <section class="legal-section" id="booking">
+        <h2>04. Booking Requests and Confirmation</h2>
+
+        <p>
+          You must provide accurate information when making a booking,
+          including your name, telephone number, email address, requested
+          date and time, service type, duration and pickup location.
+          Provide a drop-off location and other instructions where
+          requested or relevant to the service.
+        </p>
+
+        <p>
+          Before payment, review the booking summary and total amount.
+          Contact us promptly if you identify an error or if your
+          requirements change.
+        </p>
+
+        <p>
+          Submitting a booking form creates a request and does not, by
+          itself, guarantee that a chauffeur or vehicle has been allocated.
+          We will communicate acceptance or any further steps required
+          through the applicable booking process.
+        </p>
+
+        <p>
+          A payment initiation message or an unverified transaction is
+          not proof that payment has succeeded. Where the booking process
+          requires payment, the transaction must be verified and the
+          applicable confirmation process completed. If payment succeeds
+          but the service cannot be provided, we will address the matter
+          in accordance with these terms and applicable law.
+        </p>
+
+        <p>
+          We may contact you to clarify material booking details. If we
+          cannot fulfil a request, we will inform you and return any amount
+          refundable under the applicable terms and law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="prices">
+        <h2>05. Prices, Charges and Payment</h2>
+
+        <p>
+          Prices on the Mimz Ride website are displayed in Nigerian Naira
+          (NGN). The applicable rate depends on the selected service and
+          the booking duration. The website's displayed rate and booking
+          summary determine the quoted service price.
+        </p>
+
+        <p>
+          The minimum and maximum durations shown in the booking form apply
+          unless we expressly agree to a different arrangement. Before you
+          pay, we will disclose the price and any applicable mandatory
+          charges in the manner required by Nigerian consumer-protection law.
+        </p>
+
+        <p>
+          If an additional charge becomes relevant because of a change
+          requested by you, an agreed extension or another material
+          circumstance, we will explain the charge and obtain any agreement
+          required before applying it.
+        </p>
+
+        <p>
+          Where online payment is available, payments are processed through
+          Paystack's hosted checkout or the payment provider identified
+          during checkout. You must use the provider's legitimate payment
+          process. Mimz Ride does not ask you to disclose your card PIN
+          or online banking password through the booking form.
+        </p>
+
+        <p>
+          Payment status is verified through the relevant payment process.
+          Do not assume that a screenshot, browser redirect or payment
+          initiation message proves that funds have been received. If a
+          transaction remains pending or its outcome is unclear, contact
+          us before making another payment.
+        </p>
+
+        <p>
+          We will not charge your payment method for an unrelated amount
+          without an appropriate authorisation or other lawful basis.
+          Transaction records and receipts will be handled in accordance
+          with applicable law and the capabilities of the payment provider.
+        </p>
+      </section>
+
+      <section class="legal-section" id="cancellations">
+        <h2>06. Cancellations, Changes and Refunds</h2>
+
+        <p>
+          If you wish to cancel or change a booking, contact Mimz Ride
+          as soon as possible and provide your booking reference. Changes
+          are subject to availability and may require a revised booking
+          confirmation.
+        </p>
+
+        <p>
+          Under section 120 of the Federal Competition and Consumer
+          Protection Act 2018 (FCCPA), consumers have a right to reasonably
+          cancel advance bookings or reservations and may be entitled to
+          a refund, subject to lawful and reasonable cancellation charges
+          and the circumstances prescribed by law. Certain circumstances
+          may entitle a consumer to a full refund without cancellation
+          charges. <a href="https://fccpc.gov.ng/resources-library/fccpa/" target="_blank" rel="noopener noreferrer">Read the FCCPA on the FCCPC website</a>.
+        </p>
+
+        <p>
+          Any specific cancellation deadline, cancellation charge, refund
+          method or other booking-specific condition must be disclosed
+          clearly before the booking is concluded, where required by law.
+          We will not rely on an undisclosed cancellation charge or a
+          blanket no-refund term to remove rights that Nigerian law
+          protects.
+        </p>
+
+        <p>
+          If Mimz Ride cannot provide a confirmed service, we will inform
+          you and address rescheduling or refunds in accordance with the
+          circumstances, any applicable booking terms and Nigerian law.
+          Where a refund is due, the processing time may depend on the
+          payment provider or financial institution; this does not remove
+          our responsibility to handle the refund appropriately.
+        </p>
+
+        <p>
+          Until a detailed cancellation policy is published, contact us
+          before booking if you need confirmation of the applicable
+          cancellation arrangements. This does not suspend any statutory
+          consumer rights.
+        </p>
+      </section>
+
+      <section class="legal-section" id="customer-responsibilities">
+        <h2>07. Customer Responsibilities</h2>
+
+        <p>You agree to:</p>
+
+        <ul>
+          <li>Provide accurate and complete booking information.</li>
+          <li>Be reasonably available at the agreed pickup time and location.</li>
+          <li>Notify us promptly of material changes to your itinerary or contact details.</li>
+          <li>Treat chauffeurs and other service personnel respectfully and follow reasonable safety instructions.</li>
+          <li>Not request unlawful, abusive, dangerous or prohibited activities.</li>
+          <li>Pay agreed charges that are lawfully due under the confirmed booking.</li>
+          <li>For chauffeur-only bookings, ensure that the vehicle you provide is lawfully used, roadworthy and appropriately insured, and that you are authorised to make it available for the journey.</li>
+          <li>Disclose material requirements that could reasonably affect the safe or lawful delivery of the service.</li>
+        </ul>
+
+        <p>
+          We will handle customer information in accordance with our
+          <a href="privacy-policy.html">Privacy Policy</a> and applicable
+          data protection law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="delays">
+        <h2>08. Delays, Disruptions and Unforeseen Events</h2>
+
+        <p>
+          Traffic, severe weather, road closures, vehicle breakdowns,
+          emergencies, safety concerns, government restrictions and other
+          events may affect the timing or delivery of a service.
+        </p>
+
+        <p>
+          We will take reasonable steps to communicate material delays
+          and discuss an appropriate alternative where practicable.
+          Where a delay or failure affects the service, the remedies
+          available will depend on the circumstances and applicable law.
+        </p>
+
+        <p>
+          Nothing in this section automatically excuses a failure to
+          perform an obligation where the law does not permit that
+          excuse, or removes a consumer's right to an applicable remedy.
+        </p>
+      </section>
+
+      <section class="legal-section" id="safety">
+        <h2>09. Safety and Prohibited Conduct</h2>
+
+        <p>
+          Customers must not use our services to facilitate criminal
+          activity, transport prohibited items unlawfully, threaten or
+          assault a chauffeur, damage property or knowingly expose any
+          person to an unreasonable safety risk.
+        </p>
+
+        <p>
+          We may refuse, suspend or discontinue a service where reasonably
+          necessary to address a serious safety risk, suspected unlawful
+          activity or a legal restriction. Where practicable, we will
+          explain the reason and consider an appropriate alternative.
+          Any resulting payment or refund issue will be handled in
+          accordance with the circumstances and applicable law.
+        </p>
+
+        <p>
+          Nothing in this section authorises unlawful discrimination or
+          permits us to disregard a legal obligation owed to a customer.
+        </p>
+      </section>
+
+      <section class="legal-section" id="website">
+        <h2>10. Website Use and Availability</h2>
+
+        <p>
+          We aim to keep our website available and booking information
+          accurate, but we cannot guarantee uninterrupted access or that
+          the website will always be free from technical errors.
+        </p>
+
+        <p>
+          You must not attempt to interfere with the website, gain
+          unauthorised access to systems or data, introduce malicious
+          software, misuse payment or booking functions, or use the website
+          in a way that violates applicable law.
+        </p>
+
+        <p>
+          We may carry out maintenance, security updates or changes to
+          website features. Such changes will not remove rights that
+          customers have under an existing booking or applicable law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="liability">
+        <h2>11. Responsibility and Liability</h2>
+
+        <p>
+          Mimz Ride will perform its obligations in accordance with the
+          confirmed booking and applicable law. Where a service is not
+          provided to the standard required by law, a customer may be
+          entitled to an appropriate remedy, which may include correction,
+          re-performance or a reasonable refund where applicable.
+        </p>
+
+        <p>
+          We are not responsible for a loss to the extent it is caused
+          by inaccurate or incomplete information supplied by a customer,
+          unlawful customer conduct or another cause for which applicable
+          law does not impose responsibility on us. This does not exclude
+          liability where we remain legally responsible.
+        </p>
+
+        <p>
+          Nothing in these terms excludes, restricts or waives liability
+          for fraud, a misrepresentation or other conduct where exclusion
+          is prohibited by law. Nor do these terms exclude statutory
+          consumer rights, implied obligations or remedies that cannot
+          lawfully be excluded.
+        </p>
+
+        <p>
+          Any limitation of liability will apply only to the extent that
+          it is lawful, fair and enforceable in the circumstances. No
+          provision in these terms is intended to override mandatory
+          consumer protections under the FCCPA or other applicable law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="privacy">
+        <h2>12. Privacy and Personal Information</h2>
+
+        <p>
+          We collect and use personal information to manage bookings,
+          communicate with customers, verify payments, protect our
+          systems and meet applicable obligations. Further details are
+          provided in our
+          <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+
+        <p>
+          Personal information will be processed in accordance with
+          applicable Nigerian data protection law, including the Nigeria
+          Data Protection Act 2023, where applicable to the processing.
+          These terms do not replace the privacy notice or any separate
+          notice or consent required by law.
+        </p>
+      </section>
+
+      <section class="legal-section" id="complaints">
+        <h2>13. Complaints and Dispute Resolution</h2>
+
+        <p>
+          If you have a concern about a booking, service, payment,
+          cancellation or refund, please contact Mimz Ride first.
+          Provide your booking reference, a description of the issue
+          and any relevant transaction information so that we can
+          investigate and respond.
+        </p>
+
+        <p>
+          We will make reasonable efforts to resolve complaints fairly
+          and promptly. Contacting us first does not prevent you from
+          pursuing a complaint before a competent regulator or using
+          another remedy available under Nigerian law.
+        </p>
+
+        <p>
+          Where a consumer dispute falls within the jurisdiction of the
+          Federal Competition and Consumer Protection Commission (FCCPC),
+          information about consumer rights and complaints is available
+          at the
+          <a href="https://fccpc.gov.ng/" target="_blank" rel="noopener noreferrer">official FCCPC website</a>.
+        </p>
+      </section>
+
+      <section class="legal-section" id="governing-law">
+        <h2>14. Governing Law and Jurisdiction</h2>
+
+        <p>
+          These terms are governed by the laws of the Federal Republic
+          of Nigeria, including applicable Nigerian contract and consumer
+          protection legislation.
+        </p>
+
+        <p>
+          Any dispute that cannot be resolved informally may be referred
+          to a court or competent dispute-resolution body with jurisdiction
+          under applicable Nigerian law. Nothing in these terms prevents
+          a customer from exercising a statutory right to seek redress
+          before a competent authority or court.
+        </p>
+      </section>
+
+      <section class="legal-section" id="general">
+        <h2>15. General Provisions</h2>
+
+        <p>
+          If any provision of these terms is found to be unlawful or
+          unenforceable, it will be applied only to the extent permitted
+          by law. The remaining provisions will continue to apply so
+          far as they can operate lawfully.
+        </p>
+
+        <p>
+          A failure or delay in exercising a right does not automatically
+          amount to a waiver of that right. Any waiver must be assessed
+          in accordance with applicable law.
+        </p>
+
+        <p>
+          These terms should be read together with the confirmed booking
+          details, the price and service information disclosed before
+          payment, and the Privacy Policy. If a specific booking condition
+          conflicts with a mandatory legal right, the mandatory legal
+          requirement prevails.
+        </p>
+      </section>
+
+      <section class="legal-section" id="contact">
+        <h2>16. Contact Mimz Ride</h2>
+
+        <p>
+          For booking enquiries, cancellations, payment concerns or
+          questions about these terms, contact us through the official
+          contact details provided on the Mimz Ride website.
+        </p>
+
+        <ul>
+          <li><strong>Operator:</strong> Mimz</li>
+          <li><strong>Email:</strong> mimzride@gmail.com</li>
+          <li><strong>Business address:</strong> No. 4B Town Hall Mall, Barnawa, Kaduna</li>
+        </ul>
+
+        <p>
+          Please include your booking reference where relevant, but do
+          not send payment PINs, passwords or other confidential
+          authentication information.
+        </p>
+      </section>
+
+    </article>
+
+    <aside class="legal-sidebar">
+      <p class="legal-sidebar-label">On this page</p>
+
+      <nav aria-label="Terms of Service sections">
+        <ol class="legal-index">
+          <li><a href="#operator">Service provider</a></li>
+          <li><a href="#acceptance">Acceptance and scope</a></li>
+          <li><a href="#services">Our services</a></li>
+          <li><a href="#booking">Booking and confirmation</a></li>
+          <li><a href="#prices">Prices and payment</a></li>
+          <li><a href="#cancellations">Cancellations and refunds</a></li>
+          <li><a href="#customer-responsibilities">Customer responsibilities</a></li>
+          <li><a href="#delays">Delays and disruptions</a></li>
+          <li><a href="#safety">Safety and prohibited conduct</a></li>
+          <li><a href="#website">Website use</a></li>
+          <li><a href="#liability">Liability</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#complaints">Complaints and disputes</a></li>
+          <li><a href="#governing-law">Governing law</a></li>
+          <li><a href="#general">General provisions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <div class="legal-sidebar-note">
+        <p>
+          Need help with a booking or payment? Contact Mimz Ride using
+          the official details on our website.
+        </p>
+
+        <a href="index.html#book">Return to booking &rarr;</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="legal-footer-inner">
+      <div class="legal-footer-brand">Mimz Ride</div>
+
+      <nav class="legal-footer-links" aria-label="Legal links">
+        <a href="terms-of-service.html" aria-current="page">Terms of Service</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="index.html">Main website</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
