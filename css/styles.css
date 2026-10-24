@@ -2396,3 +2396,80 @@ footer a:hover {
     animation: none;
   }
 }
+
+
+/* Social media icons */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  opacity: 1;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Instagram */
+.social a[aria-label="Instagram"] {
+  background: #E1306C;
+}
+
+/* Facebook */
+.social a[aria-label="Facebook"] {
+  background: #1877F2;
+}
+
+/* X */
+.social a[aria-label="X"] {
+  background: #000;
+  border-color: #333;
+}
+
+/* KingsChat */
+.social a[aria-label="KingsChat"] {
+  background: #fff;
+  border-color: #ddd;
+  color: #222;
+}
+
+.social a svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.social a img {
+  display: block;
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.social a:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+.social a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social a {
+    transition: none;
+  }
+}
