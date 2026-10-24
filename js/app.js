@@ -1,16 +1,31 @@
 const $ = id => document.getElementById(id);
 
 
+
 const navbar = document.querySelector("header");
+const siteLogo = $("site-logo");
 
 function updateNavbar() {
   if (!navbar) return;
 
-  navbar.classList.toggle("is-scrolled", window.scrollY > 20);
+  const isScrolled = window.scrollY > 20;
+
+  navbar.classList.toggle("is-scrolled", isScrolled);
+
+  if (siteLogo) {
+    const logoPath = isScrolled
+      ? "assets/light-logo.png"
+      : "assets/white.png";
+
+    if (!siteLogo.getAttribute("src")?.endsWith(logoPath)) {
+      siteLogo.setAttribute("src", logoPath);
+    }
+  }
 }
 
 window.addEventListener("scroll", updateNavbar, { passive: true });
 updateNavbar();
+
 
 
 const naira = n =>

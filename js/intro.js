@@ -1,4 +1,3 @@
-
 (() => {
   const intro = document.getElementById("ride-intro");
   const car = document.getElementById("ride-intro-car");

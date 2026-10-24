@@ -1074,6 +1074,64 @@ footer .brand {
   color: var(--white);
 }
 
+
+/* Footer logo */
+footer .fbrand .brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+footer .fbrand .brand img {
+  display: block;
+  width: auto;
+  height: 58px;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: left center;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Footer brand description */
+footer .fbrand > p {
+  max-width: 320px;
+  margin: 16px 0 20px;
+  line-height: 1.75;
+}
+
+/* Footer logo hover and keyboard accessibility */
+footer .fbrand .brand:hover {
+  opacity: 0.9;
+}
+
+footer .fbrand .brand:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+/* Tablet and mobile logo sizing */
+@media (max-width: 768px) {
+  footer .fbrand .brand img {
+    height: 52px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .fbrand .brand img {
+    height: 48px;
+    max-width: 190px;
+  }
+}
+
+
 footer .mark {
   background: var(--white);
   color: var(--navy);
