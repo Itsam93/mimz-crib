@@ -1,6 +1,13 @@
 const $ = id => document.getElementById(id);
 
+// reset page on every reload.
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
+window.addEventListener("pageshow", () => {
+  window.scrollTo(0, 0);
+});
 
 const navbar = document.querySelector("header");
 const siteLogo = $("site-logo");
